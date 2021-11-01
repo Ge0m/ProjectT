@@ -1,0 +1,22 @@
+@font-face { font-family: SecretFont; src: url('SecretFont.ttf'); }
+
+html{
+    background: black;
+}
+
+div {
+    top: 50%;
+    right: 50%;
+    position: absolute;
+}
+#timer {
+    font-family: SecretFont;
+    font-size: 80px;
+    color: red;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
