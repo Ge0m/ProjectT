@@ -2,17 +2,25 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>R1</title>
+        <title>TDemo</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <!-- Display the countdown timer in an element -->
-    <div>
+    <div class="timer">
         <p id="timer"></p>
     </div>
+
+    <div class="rContainer">
+        <video controls="" loop="loop" autoplay="" id="reveal" class="hideReveal" width="1280" height="720" poster="thumbnail.jpg" src="RT.mp4"></video>
+    </div>
+
     <script>
     // Set the date we're counting down to
     var countDownDate = new Date("Dec 18, 2021 22:00:00 CST").getTime();
+    
+    var hideReveal = document.getElementsByClassName("hideReveal")[0];
+    hideReveal.style.display = "none";
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -36,7 +44,8 @@
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timer").innerHTML = "REVEAL";
+        document.getElementById("timer").innerHTML = "";
+        hideReveal.style.display = "";
     }
     }, 1000);
     </script>
